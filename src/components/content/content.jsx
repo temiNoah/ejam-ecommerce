@@ -9,10 +9,10 @@ function Content() {
         <Container style={{ display: 'flex', width: '100%', border: '0px solid #fff', padding: 0, flexDirection: 'column', gap: '10px', marginBottom: '10%' }} >
             <Row className="" style={{ width: '100%', display: 'flex', justifyContent: 'space-between', padding: '20px', border: '0px solid #000' }} lg='12'>
                 <Col xs="12" lg="12" style={{ display: 'flex', border: '0px solid #000', justifyContent: 'space-between' }} >
-                    <img src={require('../../assets/images/Clarifion_Logo.png')} alt="logo" className='tiny_image' style={{ width: '200px', height: '50px' }} />
-                    <div style={{ display: 'flex', gap: '20px' }}>
-                        <img src={require('../../assets/images/McAfee__Secure.png')} alt="logo" style={{ width: '100px', height: '50px' }} />
-                        <img src={require('../../assets/images/Norton-Logo-2019.png')} alt="logo" style={{ width: '80px', height: '50px' }} />
+                    <img src={require('../../assets/images/Clarifion_Logo.png')} alt="logo" className='logo mobile-logo' />
+                    <div style={{ display: 'flex', gap: '20px' }} className='security-img mobile-security-img'>
+                        <img src={require('../../assets/images/McAfee__Secure.png')} alt="shield" className='mcafee mobile-mcafee' />
+                        <img src={require('../../assets/images/Norton-Logo-2019.png')} alt="shield" className='norton mobile-norton' />
                     </div>
                 </Col>
             </Row>
@@ -29,25 +29,25 @@ function Content() {
                     <Nav style={{ border: '0px solid #000' }}>
                         <NavItem>
                             <NavLink active href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>1</span>} Step 1: Cart Review
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>1</span>} <span className='mobile-steps'>Step 1:</span><span className='mobile-step-name'>Cart Review</span>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
                             <NavLink href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>2</span>} Step 2: Checkout
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>2</span>} <span className='mobile-steps'>Step 2:</span> <span className='mobile-step-name'>Checkout</span>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
                             <NavLink href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>3</span>} Step 3: Special Offer
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>3</span>} <span className='mobile-steps'> Step 3:</span><span className='mobile-step-name'>Special Offer</span>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
                             <NavLink disabled href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>4</span>}Step 4: Confirmation
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>4</span>} <span className='mobile-steps'>Step 4:</span> <span className='mobile-step-name'>Confirmation</span>
                             </NavLink>
                         </NavItem>
                     </Nav>
@@ -55,9 +55,9 @@ function Content() {
             </Row>
 
             <Row style={{ display: 'flex', justifyContent: 'center', }}>
-                <div style={{ display: 'flex', width: '80%', border: '0px solid #000', gap: '20px' }}>
+                <div style={{ display: 'flex', width: '80%', border: '0px solid #000', gap: '20px' }} className='mobile-content-pane'>
 
-                    <div style={{ border: '0px solid #000', flex: '1' }}>
+                    <div style={{ border: '0px solid #000', flex: '1' }} className='mobile-left-pane'>
                         <img src={require('../../assets/images/image 4.png')} alt="logo" className='tiny_image' style={{ width: "100%", heigh: '100%' }} />
                         <div>
                             <div className="cellWithIm" style={{ display: 'flex', }}>
@@ -74,7 +74,8 @@ function Content() {
                             </div>
                         </div>
                     </div>
-                    <div style={{ flex: '1', justifyContent: 'space-between' }}>
+
+                    <div style={{ flex: '1', justifyContent: 'space-between' }} className='mobile-left-pane'>
                         <div>
                             <span style={{ textTransform: 'uppercase' }}>one time only</span> Special Price 6 Extra Clarifion For Only $14 Each ($84.00)Total!
                         </div>
@@ -164,6 +165,8 @@ function Content() {
                         </div>
 
                     </div>
+
+
                 </div>
 
             </Row>

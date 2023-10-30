@@ -18,25 +18,26 @@
   min-height: 10vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  justify-content: space-between;
   font-size: calc(5px + 1vmin);
   color: white;
+  width: 100%;
   /* border: 1px solid #ff0000; */
 
 }
 
-.header {
+.tabs {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
+  list-style-type: none;
   /* border: 1px solid #ff0000; */
 }
 
 .App-header li {
-  display: inline;
-
+  /* display: inline; */
   /* border: 1px solid #000 */
 }
 
@@ -104,6 +105,28 @@ span {
   padding: 20px;
 }
 
+.mobile-tab-arrow {
+  display: none;
+}
+
+.logo {
+  width: 200px;
+  height: 50px;
+}
+
+.mcafee {
+  width: 100px;
+  height: 50px;
+}
+
+.norton {
+  width: 80px;
+  height: 50px;
+}
+
+.mobile-tabs {
+  display: none;
+}
 
 
 
@@ -114,5 +137,122 @@ span {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+/* On screens that are 992px or less,  */
+@media screen and (max-width: 992px) {
+  body {
+    /* background-color: blue; */
+  }
+
+  .mobile-tab-arrow {
+    display: block;
+    cursor: pointer;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+}
+
+/* On screens that are 600px or less, */
+@media screen and (max-width: 600px) {
+  body {
+    /* background-color: olive; */
+  }
+
+  .mobile-tab-arrow {
+    display: block;
+  }
+
+  .tabs {
+    width: 100%;
+    display: none;
+  }
+
+  .mobile-tabs {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .mobile-tabs li {
+    padding: 0px 20px 0px 20px;
+  }
+
+
+  .active-tab {
+    display: block;
+  }
+
+  .inactive-tab {
+    display: none;
+  }
+
+  .App-header {
+    width: 100%;
+  }
+
+  .App {
+    width: 100%;
+
+  }
+
+  #root {
+    width: 100%;
+  }
+
+  .mobile-left-pane {}
+
+  .mobile-content-pane {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-logo {
+    width: 100px;
+    height: 20px;
+  }
+
+  .mobile-mcafee {
+    width: 50px;
+    height: 20px;
+  }
+
+  .norton {
+    width: 30px;
+    height: 20px;
+  }
+
+  .mobile-steps {
+    display: none;
+  }
+
+  .mobile-step-name {
+    display: block;
+  }
+
+  .row {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+  }
+
+  .nav {
+    padding: 0px;
+    font-size: 12px;
+  }
+
+  .nav-link {
+    padding: 5px;
+  }
+
+  .footer {
+    width: 100%;
+    font-size: 10px;
+    padding: 10px;
   }
 }
