@@ -15,23 +15,103 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 1vmin);
   color: white;
+  /* border: 1px solid #ff0000; */
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  /* border: 1px solid #ff0000; */
+}
+
+.App-header li {
+  display: inline;
+
+  /* border: 1px solid #000 */
+}
+
+.stage-bullet {
+  border: 1px solid rgb(43, 127, 248);
+  height: 25px;
+  width: 25px;
+  background-color: rgb(43, 127, 248);
+  border-radius: 50%;
+  display: inline-block;
+  color: white;
+}
+
+.psp-group {
+  list-style-type: none;
+  border: 0px solid #000;
+  height: 20px;
+  /* width: 50%; */
+  border: 0px solid #000;
+}
+
+.psp-group li {
+  display: inline;
+  padding: 0px;
+  /* width: 30%; */
+}
+
+span {
+  font-size: 12px;
+  margin: 2px;
+}
+
+.psp-group img {
+  width: 20px;
+  /* height: 20px; */
+  cursor: pointer;
+}
+
+.item-benefits {
+  padding: 0;
+}
+
+.item-benefits li {
+  font-size: 12px;
+  text-align: start;
+
 }
 
 .App-link {
   color: #61dafb;
 }
 
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
