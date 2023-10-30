@@ -45,9 +45,14 @@
   border: 1px solid rgb(43, 127, 248);
   height: 25px;
   width: 25px;
-  background-color: rgb(43, 127, 248);
+  /* background-color: rgb(43, 127, 248); */
   border-radius: 50%;
   display: inline-block;
+  color: rgb(43, 127, 248);
+}
+
+.active-stage {
+  background-color: rgb(43, 127, 248);
   color: white;
 }
 
@@ -185,13 +190,10 @@ span {
   }
 
 
-  .active-tab {
-    display: block;
+  .active-stage {
+    background-color: rgb(43, 127, 248);
   }
 
-  .inactive-tab {
-    display: none;
-  }
 
   .App-header {
     width: 100%;

@@ -5,6 +5,14 @@ import { Container, Row, Col, Nav, NavItem, NavLink, Button } from "reactstrap";
 function Content() {
     const [isCompleted, setIsCompleted] = useState(false);
     const stars = [1, 2, 3, 4, 5]
+
+    const toggleStage = (value) => {
+        var list = document.querySelectorAll('.stage-bullet')
+        for (var index = 0; index < list.length; ++index) {
+            list[index].classList.remove('active-stage')
+        }
+        document.querySelector(".stage" + value).classList.add('active-stage')
+    }
     return (
         <Container style={{ display: 'flex', width: '100%', border: '0px solid #fff', padding: 0, flexDirection: 'column', gap: '10px', marginBottom: '10%' }} >
             <Row className="" style={{ width: '100%', display: 'flex', justifyContent: 'space-between', padding: '20px', border: '0px solid #000' }} lg='12'>
@@ -29,25 +37,25 @@ function Content() {
                     <Nav style={{ border: '0px solid #000' }}>
                         <NavItem>
                             <NavLink active href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>1</span>} <span className='mobile-steps'>Step 1:</span><span className='mobile-step-name'>Cart Review</span>
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet stage1'>1</span>} <span className='mobile-steps'>Step 1:</span><span className='mobile-step-name' onClick={() => toggleStage('1')}>Cart Review</span>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
                             <NavLink href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>2</span>} <span className='mobile-steps'>Step 2:</span> <span className='mobile-step-name'>Checkout</span>
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet stage2'>2</span>} <span className='mobile-steps'>Step 2:</span> <span className='mobile-step-name' onClick={() => toggleStage('2')}>Checkout</span>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
                             <NavLink href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>3</span>} <span className='mobile-steps'> Step 3:</span><span className='mobile-step-name'>Special Offer</span>
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet stage3'>3</span>} <span className='mobile-steps'> Step 3:</span><span className='mobile-step-name' onClick={() => toggleStage('3')}>Special Offer</span>
                             </NavLink>
                         </NavItem>
 
                         <NavItem>
                             <NavLink disabled href="#">
-                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet'>4</span>} <span className='mobile-steps'>Step 4:</span> <span className='mobile-step-name'>Confirmation</span>
+                                {isCompleted ? <i class="ri-checkbox-circle-line" ></i> : <span className='stage-bullet stage4'>4</span>} <span className='mobile-steps'>Step 4:</span> <span className='mobile-step-name' onClick={() => toggleStage('4')}>Confirmation</span>
                             </NavLink>
                         </NavItem>
                     </Nav>
